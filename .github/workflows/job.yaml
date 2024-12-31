@@ -1,0 +1,14 @@
+name: Terraform:Deploy-generic
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [terraform_run]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Run
+        shell: bash
+        run: echo 123
